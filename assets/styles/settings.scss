@@ -1,0 +1,180 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://vuetifyjs.com/features/sass-variables/`
+// @use 'vuetify/settings' with (
+//   $color-pack: false
+// );
+
+[class*="col-"] {
+  float: left;
+}
+      
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+// vars
+
+// (fonts)
+$landingSpecialFont: "Libre Baskerville", serif;
+$fontSize: calc(14pt + 2vw);
+
+// (colors)
+$landingText: black;
+$landingBg: #b3adad;
+$bannerBgColor: #eceae5;
+
+// mixins
+@mixin no-display {
+  display: none;
+}
+
+@mixin main-bg {
+  background-color: $landingBg;
+  padding: 2rem 0;
+}
+
+@mixin banners {
+  font-family: $landingSpecialFont;
+  background-color: $landingBg
+}
+
+@mixin disco-img {
+  width: 80vw;
+  margin: auto;
+}
+
+.banner {
+  @include banners();
+}
+
+.banner-bg {
+  background-image: url('@/assets/luxury-black-silk.jpg');
+  background-size: cover;
+}
+
+.landing-cont {
+  background-color: $landingBg;
+}
+
+.main-bg {
+  @include main-bg();
+}
+
+// styles
+.page-header {
+  font-family:"Lobster",sans-serif;
+  color:#e4cb58;
+  text-shadow:7px 7px 9px #000,0 0 25px #fc0,0 0 5px #8b6b00;
+  font-size: calc(18pt + 1.25vw);
+}
+
+.sub-header {
+  font-family:"Lobster",sans-serif;
+  color:#b3adad;
+  text-shadow:1px 1px 2px aqua;
+  text-align:center;
+  line-height: 0;
+  font-size: calc(16pt + .75vw);
+  padding-bottom: 1.75vw;
+}
+
+header {
+  background-image: url('src/assets/dark-gold-hand.jpg');
+  background-size: auto;
+}
+
+.landing-text {
+  font-family: $landingSpecialFont;
+  font-size: calc(12pt + 1vw);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.landing-col {
+  color: $landingText;
+  background-color: $landingBg;
+  font-family: $landingSpecialFont;
+  margin: 2.5vw 2.5vw 0 0;
+}
+
+.personalize-links {
+  background-color: $landingBg;
+  color: black;
+}
+
+.info-title {
+  font-size: calc(12pt + 3vw);
+  padding: 2rem 1rem;
+}
+.landing-vid {
+  height: 400px;
+  background: $landingBg;
+}
+
+.landing-split {
+  display: grid;
+  float: right;
+  grid-auto-flow: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  grid-template-columns: 60% 1fr;
+}
+
+.about-images {
+  height: 500px;
+}
+
+.about-text {
+  margin: auto;
+  text-align: justify;
+}
+
+#about-container {
+  margin: auto;
+}
+
+// @media declarations
+@media screen and (max-width: 800px) {
+  .dissapear, 
+  .footer-disclaimer,
+  .caro-pics,
+  .item-pic {
+    @include no-display()
+  }
+
+  .cart-items {
+    width: 90vw;
+  }
+
+  .landing-vid {
+    height: 100%;
+  }
+
+  .landing-images {
+    width: 100vw;
+  }
+
+  .dissapear {
+    @include no-display();
+  }
+
+  .disco-img {
+    @include disco-img();
+  }
+}
