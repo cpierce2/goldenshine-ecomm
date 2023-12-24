@@ -138,8 +138,6 @@
   import Img10 from '@/assets/gj10.jpg'
   import Img11 from '@/assets/gj11.jpg'
   import Img12 from '@/assets/gj12.jpeg'
-
-  // ref import from vue
   import { ref } from 'vue'
 
   // creates data for the page to loop through and export

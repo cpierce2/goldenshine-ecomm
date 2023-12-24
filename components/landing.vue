@@ -183,7 +183,7 @@
 
       <!-- card subtitle -->
       <v-card-subtitle 
-        class="wrap text-h5 font-weight-medium text-black" 
+        class="wrap text-h5 font-weight-medium" 
         style='line-height: 1.5;'>
         Find the right gift for that special someone on Santa's Nice List.
       </v-card-subtitle>
@@ -243,9 +243,6 @@
   import img5 from '@/assets/proposal2.jpeg'
   import img6 from '@/assets/christmas_jewelry.jpg'
   import img7 from '@/assets/luxury-black-silk.jpg'
-
-  import '@/assets/styles/settings.scss'
-
 
   // exports data
   export default {

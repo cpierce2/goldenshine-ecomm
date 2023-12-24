@@ -1,8 +1,8 @@
 <template>
   <!-- creates the card element for the page -->
-  <v-card class='main-bg text-black'>
+  <v-card class='main-bg'>
     <!-- page title  -->
-    <v-card-title class='text-center mb-8'>
+    <v-card-title class='text-center mb-8 text-black'>
       High Karat Gold:
       <br>
       The Complete Guide to Understanding Gold Quality
@@ -11,10 +11,10 @@
     </v-card-title>
 
     <!-- first image of the page -->
-    <v-img :src='images.img1' class='about-images disco-img' />
+    <v-img :src='images.img1' height='500' width='500' class='about-images disco-img mx-auto' />
 
     <!-- creates a grid -->
-    <v-row>
+    <v-row class='text-black'>
       <!-- column for the grid -->
       <v-col cols='10' offset='1'>
         <!-- item one of the column -->
@@ -35,7 +35,7 @@
     </v-row>
 
     <!-- second image of the page -->
-    <v-img :src='images.img2' class='about-images disco-img' />
+    <v-img :src='images.img2' class='about-images disco-img mx-auto' />
 
     <!-- creates grid -->
     <v-row>
@@ -56,10 +56,10 @@
     </v-row>
 
     <!-- third image of the page -->
-    <v-img :src='images.img3' class='about-images disco-img' />
+    <v-img :src='images.img3' class='about-images disco-img mx-auto' />
 
     <!-- creates grid for the content -->
-    <v-row class='pt-6 pb-6'>
+    <v-row class='pt-6 pb-6 text-black'>
       <!-- column for the grid -->
       <v-col cols='10' offset='1'>
         <!-- first item in the column -->
@@ -89,10 +89,10 @@
     </v-row>
 
     <!-- fourth image of the page -->
-    <v-img :src='images.img4' class='about-images disco-img'/>
+    <v-img :src='images.img4' class='about-images disco-img mx-auto' />
 
     <!-- creates grid for the content -->
-    <v-row class='pt-6 pb-6'>
+    <v-row class='pt-6 pb-6 text-black'>
       <!-- column in the grid -->
       <v-col cols='10' offset='1'>
         <!-- items for the column -->
@@ -144,10 +144,10 @@
     </v-row>
 
     <!-- fifth image of the page -->
-    <v-img :src='images.img5' class='about-images disco-img' />
+    <v-img :src='images.img5' height='500' width='500' class='about-images disco-img mx-auto' />
 
     <!-- creates grid for the page -->
-    <v-row class='pt-6 pb-6'>
+    <v-row class='pt-6 pb-6 text-black'>
       <!-- creates column in the grid -->
       <v-col cols='10' offset='1'>
         <!-- first item for the column -->
@@ -182,10 +182,10 @@
     </v-row>
 
     <!-- sixth image for the page -->
-    <v-img :src='images.img6' class='about-images disco-img' />
+    <v-img :src='images.img6' height='500' width='500' class='about-images disco-img mx-auto' />
 
     <!-- creates grid -->
-    <v-row class='pt-6 pb-6'>
+    <v-row class='pt-6 pb-6 text-black'>
       <!-- column in the grid -->
       <v-col cols='10' offset='1'>
         <!-- first item in the column -->
@@ -234,7 +234,7 @@
   import img1 from '@/assets/about1.jpg'
   import img2 from '@/assets/about2.jpg'
   import img3 from '@/assets/about3.jpg'
-  import img4 from '@/assets/about8.jpg'
+  import img4 from '@/assets/about4.jpg'
   import img5 from '@/assets/about5.jpg'
   import img6 from '@/assets/about6.jpg'
 
