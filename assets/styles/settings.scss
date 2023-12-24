@@ -27,11 +27,13 @@
 .col-12 {width: 100%;}
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&display=swap');
 
 // vars
 
 // (fonts)
 $landingSpecialFont: "Libre Baskerville", serif;
+$headerFont: 'Lobster', serif;
 $fontSize: calc(14pt + 2vw);
 
 // (colors)
@@ -59,6 +61,14 @@ $bannerBgColor: #eceae5;
   margin: auto;
 }
 
+@mixin img-glow {
+  width: 500px;
+  height: 500px;
+  &:hover {
+    box-shadow: 0 0 50px 15px #48abe0;
+  }
+}
+
 .banner {
   @include banners();
 }
@@ -78,17 +88,17 @@ $bannerBgColor: #eceae5;
 
 // styles
 .page-header {
-  font-family:"Lobster",sans-serif;
+  font-family: $headerFont ,sans-serif;
   color:#e4cb58;
   text-shadow:7px 7px 9px #000,0 0 25px #fc0,0 0 5px #8b6b00;
   font-size: calc(18pt + 1.25vw);
 }
 
 .sub-header {
-  font-family:"Lobster",sans-serif;
-  color:#b3adad;
-  text-shadow:1px 1px 2px aqua;
-  text-align:center;
+  font-family: "Lobster",sans-serif;
+  color: #b3adad;
+  text-shadow: 1px 1px 2px aqua;
+  text-align: center;
   line-height: 0;
   font-size: calc(16pt + .75vw);
   padding-bottom: 1.75vw;
@@ -137,7 +147,7 @@ header {
 }
 
 .about-images {
-  height: 500px;
+  @include img-glow();
 }
 
 .about-text {

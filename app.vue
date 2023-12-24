@@ -1,17 +1,15 @@
 <template>
-
-  <!--
-  <div>
-    <NuxtWelcome />
-  </div>-->
-
-  <div>
+  <v-app>
+    <app-bar />
     <home-view />
-  </div>
+    <footer-template />
+  </v-app>
 </template>
+
 
 <script setup>
 
-  import homeView from './components/homeView.vue';
+import '@/assets/styles/settings.scss'
+
 
 </script>
