@@ -6,20 +6,13 @@
     <!-- creates text element for the card -->
     <v-card-text>
       <!-- fetched api data outputted here -->
-      <pre></pre>
+      <p>{{ count.rates }}</p>
     </v-card-text>
   </v-card>
 </template>
 
 <script setup>
-  // creates a fetch for api
-  fetch('https://api.metalpriceapi.com/v1/latest?api_key=93868a235967cf43d3ceca81c7490453&base=USD&currencies=JPY')
-  .then(data => 
-  data.json()
-  )
-  .then(data => {
-    console.log(data);
-    document.querySelector('pre').innerHTML = JSON.stringify(data.rates);
-  })
-  .catch(error => console.error(error));
+
+const { data: count } = await useFetch('https://api.metalpriceapi.com/v1/latest?api_key=86e012277b37e177afd6b8e282b5fe2c&base=USD&currencies=JPY')
+
 </script>
