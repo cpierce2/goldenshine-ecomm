@@ -222,7 +222,6 @@
 
     <!-- creates a image carousel -->
     <v-carousel 
-      interval='200ms' 
       cycle 
       hide-delimiters 
       show-arrows='hover'

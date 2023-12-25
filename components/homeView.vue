@@ -159,10 +159,7 @@
       <!-- window to show pages (content) -->
       <v-window v-model="tab">
         <!-- dynamically creates window items -->
-        <v-window-item v-for="item in items"
-          :key="item"
-          :value="item" >
-        </v-window-item>
+        <v-window-item />
       </v-window>
     </v-card>
 
@@ -215,7 +212,6 @@
   import landing from '@/components/landing.vue'
   import cart from '@/components/cart.vue';
   import shoppingCart from '@/components/shoppingCart.vue';
-import axios from 'axios';
 
   export default {
     data: () => ({
