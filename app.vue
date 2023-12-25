@@ -8,8 +8,8 @@
 
 
 <script setup>
-
-import '@/assets/styles/settings.scss'
+  // imports styles for the site
+  import '@/assets/styles/settings.scss'
 
 
 </script>
