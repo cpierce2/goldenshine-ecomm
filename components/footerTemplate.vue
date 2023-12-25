@@ -21,19 +21,29 @@
     <div class="pt-0 footer-disclaimer">
       Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
     </div>
+
     <!-- divider -->
     <v-divider />
 
+    <!-- displays Gold rate api info -->
+    <api />
+
     <!-- gets year and displays company title -->
     <div>
-      {{ new Date().getFullYear() }} — <strong>Golden Shine Jewlery Shop LLC.</strong>
+      {{ new Date().getFullYear() }} 
+      — <strong>Golden Shine Jewlery Shop LLC.</strong>
     </div>
   </v-footer>
 </template>
 
-<script>
+<script >
+  // imports
+  import api from './api.vue';  
+
+  // exports data
   export default {
     data: () => ({
+      props: ['foo'],
       icons: [
         {logo: 'mdi-facebook', page: 'https://www.facebook.com'},
         {logo: 'mdi-twitter', page: 'https://twitter.com/'},
@@ -41,5 +51,13 @@
         {logo: 'mdi-instagram', page: 'https://www.instagram.com/'}
       ],
     }),
+    // validation properties
+    setup(props) {
+      // setup() receives props as the first argument.
+      console.log(props.foo)
+    },
+    components: {
+      api,
+    }
   }
 </script>

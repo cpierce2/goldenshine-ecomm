@@ -214,7 +214,8 @@
   import reviews from '@/components/review.vue';
   import landing from '@/components/landing.vue'
   import cart from '@/components/cart.vue';
-  import shoppingCart from '@/components/shoppingCart.vue'
+  import shoppingCart from '@/components/shoppingCart.vue';
+import axios from 'axios';
 
   export default {
     data: () => ({
@@ -222,7 +223,7 @@
       snackbar: false,
       loading: false,
       tab: null,
-      gold: null,
+
       // pages object
       pages: [
         {tab: 'Home', href: discover},
@@ -241,7 +242,7 @@
           lg: 800,
           xl: 1280,
         }
-      }
+      },
     }),
     watch: {
       loading (val) {

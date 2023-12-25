@@ -138,12 +138,15 @@
   import Img10 from '@/assets/gj10.jpg'
   import Img11 from '@/assets/gj11.jpg'
   import Img12 from '@/assets/gj12.jpeg'
+
+  // imports ref from vue
   import { ref } from 'vue'
 
   // creates data for the page to loop through and export
   export default {
     data: () => ({
       show: false,
+
       dialog: ref(true),
       // data for the loop iteration
       prodCards: [
