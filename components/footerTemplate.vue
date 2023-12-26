@@ -25,8 +25,8 @@
     <!-- divider -->
     <v-divider />
 
-    <!-- displays Gold rate api info -->
-    <api />
+    <!-- displays Gold rate api info             <api />                        -->
+    
 
     <!-- gets year and displays company title -->
     <div>
@@ -38,7 +38,7 @@
 
 <script >
   // imports
-  import api from './api.vue';  
+  // import api from './api.vue';  
 
   // exports data
   export default {
@@ -57,7 +57,7 @@
       console.log(props.foo)
     },
     components: {
-      api,
+    //  api,
     }
   }
 </script>
