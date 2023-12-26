@@ -13,6 +13,6 @@
 
 <script setup>
 
-const { data: count } = await useFetch('https://api.metalpriceapi.com/v1/latest?api_key=86e012277b37e177afd6b8e282b5fe2c&base=USD&currencies=JPY')
+//const { data: count } = await useFetch('https://api.metalpriceapi.com/v1/latest?api_key=86e012277b37e177afd6b8e282b5fe2c&base=USD&currencies=JPY')
 
 </script>

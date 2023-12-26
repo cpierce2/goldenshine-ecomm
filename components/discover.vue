@@ -11,7 +11,11 @@
     </v-card-title>
 
     <!-- first image of the page -->
-    <v-img :src='images.img1' height='500' width='500' class='about-images disco-img mx-auto' />
+    <v-row>
+      <v-col align-self='center' cols='3' class='mx-auto'>
+        <v-img :src='images.img1' class='about-images disco-img' />
+      </v-col>
+    </v-row>
 
     <!-- creates a grid -->
     <v-row class='text-black'>
@@ -35,7 +39,11 @@
     </v-row>
 
     <!-- second image of the page -->
-    <v-img :src='images.img2' class='about-images disco-img mx-auto' />
+    <v-row>
+      <v-col align-self='center' cols='3' class='mx-auto'>
+        <v-img :src='images.img2' class='about-images disco-img' />
+      </v-col>
+    </v-row>
 
     <!-- creates grid -->
     <v-row>
@@ -56,7 +64,11 @@
     </v-row>
 
     <!-- third image of the page -->
-    <v-img :src='images.img3' class='about-images disco-img mx-auto' />
+    <v-row>
+      <v-col align-self='center' cols='3' class='mx-auto'>
+        <v-img :src='images.img3' class='about-images disco-img' />
+      </v-col>
+    </v-row>
 
     <!-- creates grid for the content -->
     <v-row class='pt-6 pb-6 text-black'>
@@ -89,7 +101,11 @@
     </v-row>
 
     <!-- fourth image of the page -->
-    <v-img :src='images.img4' class='about-images disco-img mx-auto' />
+    <v-row>
+      <v-col align-self='center' cols='3' class='mx-auto'>
+        <v-img :src='images.img4' class='about-images disco-img' />
+      </v-col>
+    </v-row>
 
     <!-- creates grid for the content -->
     <v-row class='pt-6 pb-6 text-black'>
@@ -144,7 +160,11 @@
     </v-row>
 
     <!-- fifth image of the page -->
-    <v-img :src='images.img5' height='500' width='500' class='about-images disco-img mx-auto' />
+    <v-row>
+      <v-col align-self='center' cols='3' class='mx-auto'>
+        <v-img :src='images.img5' class='about-images disco-img' />
+      </v-col>
+    </v-row>
 
     <!-- creates grid for the page -->
     <v-row class='pt-6 pb-6 text-black'>
@@ -182,7 +202,11 @@
     </v-row>
 
     <!-- sixth image for the page -->
-    <v-img :src='images.img6' height='500' width='500' class='about-images disco-img mx-auto' />
+    <v-row>
+      <v-col align-self='center' cols='3' class='mx-auto'>
+        <v-img :src='images.img6' class='about-images disco-img' />
+      </v-col>
+    </v-row>
 
     <!-- creates grid -->
     <v-row class='pt-6 pb-6 text-black'>
