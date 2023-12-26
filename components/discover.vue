@@ -12,7 +12,7 @@
 
     <!-- first image of the page -->
     <v-row>
-      <v-col align-self='center' cols='3' class='mx-auto'>
+      <v-col class='mx-auto'>
         <v-img :src='images.img1' class='about-images disco-img' />
       </v-col>
     </v-row>
@@ -40,7 +40,7 @@
 
     <!-- second image of the page -->
     <v-row>
-      <v-col align-self='center' cols='3' class='mx-auto'>
+      <v-col class='mx-auto'>
         <v-img :src='images.img2' class='about-images disco-img' />
       </v-col>
     </v-row>
@@ -65,7 +65,7 @@
 
     <!-- third image of the page -->
     <v-row>
-      <v-col align-self='center' cols='3' class='mx-auto'>
+      <v-col class='mx-auto'>
         <v-img :src='images.img3' class='about-images disco-img' />
       </v-col>
     </v-row>
@@ -102,7 +102,7 @@
 
     <!-- fourth image of the page -->
     <v-row>
-      <v-col align-self='center' cols='3' class='mx-auto'>
+      <v-col class='mx-auto'>
         <v-img :src='images.img4' class='about-images disco-img' />
       </v-col>
     </v-row>
@@ -161,7 +161,7 @@
 
     <!-- fifth image of the page -->
     <v-row>
-      <v-col align-self='center' cols='3' class='mx-auto'>
+      <v-col class='mx-auto'>
         <v-img :src='images.img5' class='about-images disco-img' />
       </v-col>
     </v-row>
@@ -203,7 +203,7 @@
 
     <!-- sixth image for the page -->
     <v-row>
-      <v-col align-self='center' cols='3' class='mx-auto'>
+      <v-col class='mx-auto'>
         <v-img :src='images.img6' class='about-images disco-img' />
       </v-col>
     </v-row>
