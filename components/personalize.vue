@@ -19,12 +19,12 @@
         <!-- item for the buttons -->
         <v-card-item>
           <!-- creates nested grid -->
-          <v-row>
+          <v-row class='d-flex'>
             <!-- column in nested grid -->
             <v-col>
               <!-- creates appointment button (disabled/no href) -->
               <v-btn
-                class='text-h6 pa-2 ma-2'
+                
                 style='background-color: black;'
               >
                 BOOK AN APPOINTMENT
@@ -34,7 +34,6 @@
             <v-col>
               <!-- creates nearest store button (disabled/no href) -->
               <v-btn
-                class='text-h6 pa-2 ma-2'
                 style='background-color: black;'
               >
                 FIND NEAREST STORE
