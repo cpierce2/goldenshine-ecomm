@@ -40,7 +40,7 @@
           <!-- title -->
           <v-card-item>OUR BEGINNING</v-card-item>
           <!-- main title -->
-          <v-card-title class='info-title'>An Ethical Approach</v-card-title>
+          <v-card-title class='info-title d-flex' style='font-size: calc(14pt + 1vw);'>An Ethical Approach</v-card-title>
           <!-- text content -->
           <v-card-text>
             When we couldn’t find a standard that met ours, we created a new one. We started by 
@@ -139,7 +139,7 @@
           <!-- title -->
           <v-card-item>OUR CRAFTSMANSHIP</v-card-item>
           <!-- main title -->
-          <v-card-title class='info-title'>Design Sets Us Apart</v-card-title>
+          <v-card-title class='info-title d-flex' style='font-size: calc(14pt + 1vw);'>Design Sets Us Apart</v-card-title>
           <!-- card content -->
           <v-card-text>
             Our number one goal is to make incomparably beautiful jewelry, just for you. At our 
@@ -183,7 +183,7 @@
 
       <!-- card subtitle -->
       <v-card-subtitle 
-        class="wrap text-h5 font-weight-medium" 
+        class="wrap text-h5 font-weight-medium d-flex" 
         style='line-height: 1.5;'>
         Find the right gift for that special someone on Santa's Nice List.
       </v-card-subtitle>
