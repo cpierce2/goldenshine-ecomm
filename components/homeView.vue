@@ -141,18 +141,12 @@
 
         <!-- template -->
         <template v-slot:extension>
-          <!-- grid -->
-          <v-row>
-            <!-- column in grid -->
-            <v-col>
-              <!-- dynamically creates tabs -->
-              <v-tabs
-                v-model="tab"
-                align-tabs='center'>
-                <v-tab v-for='page in pages'>{{ page.tab }}</v-tab>
-              </v-tabs>
-            </v-col>
-          </v-row>
+          <!-- dynamically creates tabs -->
+          <v-tabs
+            v-model="tab"
+            class='mx-auto'>
+            <v-tab v-for='page in pages'>{{ page.tab }}</v-tab>
+          </v-tabs>
         </template>
       </v-toolbar>
 
