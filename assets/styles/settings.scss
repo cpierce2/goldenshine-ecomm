@@ -34,7 +34,7 @@
 // (fonts)
 $landingSpecialFont: "Libre Baskerville", serif;
 $headerFont: 'Lobster', serif;
-$fontSize: calc(14pt + 2vw);
+$fontSize: calc(12pt + .15vw);
 
 // (colors)
 $landingText: black;
@@ -83,6 +83,11 @@ $bannerBgColor: #eceae5;
 
 .main-bg {
   @include main-bg();
+}
+
+.disco-img {
+  margin: auto;
+  width: 700px;
 }
 
 // styles

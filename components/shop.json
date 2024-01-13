@@ -1,0 +1,134 @@
+[
+  {
+    "itemImage": "assets/gj1.jpg",
+    "itemName": "Layered Necklace",
+    "itemPrice": 9634.86,
+    "itemDescription": "This Necklace has seven layers and embroidered with a beautiful Hibiscus flower pendant resting to the side.",
+    "itemWeight": 32,
+    "itemKarat": 22,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  },
+  {
+    "itemImage": "assets/gj2.jpg",
+    "itemName": "Tube & Chain Mix",
+    "itemPrice": 525.64,
+    "itemDescription": "This Tube and Chain combo is made of 18k gold and designed for minimalistic style for casual wear.",
+    "itemWeight": 11.3,
+    "itemKarat": 18,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  },
+  {
+    "itemImage": "assets/gj3.jpg",
+    "itemName": "Indian Heritage Choker",
+    "itemPrice": 397.44,
+    "itemDescription": "The Indian heritage choker is a beautiful design to celebrate past and present.",
+    "itemWeight": 10.3,
+    "itemKarat": 14,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  },
+  {
+    "itemImage": "assets/gj4.jpg",
+    "itemName": "Earring & Neclace Pearl Set",
+    "itemPrice": 210.39,
+    "itemDescription": "This set is made with solid pearls and goes with any elegant dress for formal occasions.",
+    "itemWeight": 9.8,
+    "itemKarat": 18,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  },
+  {
+    "itemImage": "assets/gj5.jpg",
+    "itemName": "Christian Dior Bracelete",
+    "itemPrice": 195.72,
+    "itemDescription": "Christian Dior designs this impressive accessory for both casual and formal settings.",
+    "itemWeight": 4.9,
+    "itemKarat": 18,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  },
+  {
+    "itemImage": "assets/gj6.png",
+    "itemName": "Earring and Snake Chain Set",
+    "itemPrice": 156.54,
+    "itemDescription": "Not your run of the mill decorative design, this earring and snake chain set is a stunning piece for more unique settings.",
+    "itemWeight": 9.4,
+    "itemKarat": 14,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  },
+  {
+    "itemImage": "assets/gj7.jpg",
+    "itemName": "Couple Ring Set",
+    "itemPrice": 799.89,
+    "itemDescription": "A fabulous ring set for any couple with a minimalistic design.",
+    "itemWeight": 4.2,
+    "itemKarat": 22,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  },
+  {
+    "itemImage": "assets/gj8.png",
+    "itemName": "Ring with Diamonds",
+    "itemPrice": 3986.48,
+    "itemDescription": "This ring is set with a 1 carat worth of diamonds.",
+    "itemWeight": 2.7,
+    "itemKarat": 14,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  },
+  {
+    "itemImage": "assets/gj9.png",
+    "itemName": "Bangle",
+    "itemPrice": 335.12,
+    "itemDescription": "This bangle can be used as a bracelete or anklet.",
+    "itemWeight": 5.1,
+    "itemKarat": 18,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  },
+  {
+    "itemImage": "assets/gj10.jpg",
+    "itemName": "Ethiopian Wedding Ring",
+    "itemPrice": 266.25,
+    "itemDescription": "Designed in mind for a elegant Ethiopian inspied wedding ring",
+    "itemWeight": 3.2,
+    "itemKarat": 14,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  },
+  {
+    "itemImage": "assets/gj11.jpg",
+    "itemName": "Three Sisters Ring Set",
+    "itemPrice": 647.46,
+    "itemDescription": "The three sisters ring set is perfect for your siblings or sisters in friendship.",
+    "itemWeight": 6.7,
+    "itemKarat": 14,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  },
+  {
+    "itemImage": "assets/gj12.jpeg",
+    "itemName": "Wedding Ring Set",
+    "itemPrice": 556.49,
+    "itemDescription": "A gorgeous wedding ring set made from 18k gold, guarunteed to make your spouse happy.",
+    "itemWeight": 2.6,
+    "itemKarat": 18,
+    "price": "Price:",
+    "weight": "Weight:",
+    "karatage": "Karatage:"
+  }
+]

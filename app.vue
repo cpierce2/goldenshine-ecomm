@@ -1,7 +1,7 @@
 <template>
   <div>
     <head>
-      <!-- future use -->
+      <link rel="icon" href="GSJ_icon.ico" type="image/x-icon">
     </head>
   </div>
 
@@ -10,6 +10,7 @@
     <home-view />
     <footer-template />
   </v-app>
+  <NuxtPage />
 </template>
 
 

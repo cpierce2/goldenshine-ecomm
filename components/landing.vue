@@ -63,7 +63,16 @@
       <!-- second column for the image -->
       <v-col>
         <!-- shows image -->
-        <v-img :src='images.img5' class='landing-images' />
+        <v-img :src='images.img5' class='landing-images'>
+          <template v-slot:placeholder>
+            <div class="d-flex align-center justify-center fill-height">
+              <v-progress-circular
+                color="grey-lighten-4"
+                indeterminate
+              />
+            </div>
+          </template>
+        </v-img>
       </v-col>
     </v-row>
 
@@ -129,7 +138,16 @@
       <!-- column in grid -->
       <v-col>
         <!-- image in column -->
-        <v-img :src='images.img4' class='landing-images' />
+        <v-img :src='images.img4' class='landing-images'>
+          <template v-slot:placeholder>
+            <div class="d-flex align-center justify-center fill-height">
+              <v-progress-circular
+                color="grey-lighten-4"
+                indeterminate
+              />
+            </div>
+          </template>
+        </v-img>
       </v-col>
 
       <!-- second column -->
@@ -227,7 +245,16 @@
       show-arrows='hover'
       class='my-6'>
       <!-- dynamically adds images -->
-      <v-carousel-item v-for='item in carouselItems' :key='item' :src='item.img' />
+      <v-carousel-item v-for='item in carouselItems' :key='item' :src='item.img'>
+        <template v-slot:placeholder>
+          <div class="d-flex align-center justify-center fill-height">
+            <v-progress-circular
+              color="grey-lighten-4"
+              indeterminate
+            ></v-progress-circular>
+          </div>
+        </template>
+      </v-carousel-item>
     </v-carousel>
   </v-container>
 </template>

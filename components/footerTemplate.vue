@@ -25,7 +25,7 @@
     <!-- divider -->
     <v-divider />
 
-    <!-- displays Gold rate api info                                     -->
+    <!-- displays Gold rate api info -->
     <api />
 
     <!-- gets year and displays company title -->
