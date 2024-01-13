@@ -6,7 +6,7 @@
       <!-- column in the grid -->
       <v-col class='px-16 pt-16' style='background-color: whitesmoke;'>
         <!-- title content for the column -->
-        <v-card-title class='text-black' style='line-height: 1; font-size: calc(18pt + 2vw); padding-left: 1.5vw;'>
+        <v-card-title class='text-black' style='line-height: 1; font-size: calc(10pt + 2vw);'>
           Personalization & <br>Engraving
         </v-card-title>
 
@@ -16,37 +16,42 @@
           special touch with our expert personalization and custom engraving services.
         </v-card-item>
 
-        <!-- item for the buttons -->
-        <v-card-item>
-          <!-- creates nested grid -->
-          <v-row class='d-flex'>
-            <!-- column in nested grid -->
-            <v-col>
-              <!-- creates appointment button (disabled/no href) -->
-              <v-btn
-                
-                style='background-color: black;'
-              >
-                BOOK AN APPOINTMENT
-              </v-btn>
-            </v-col>
-            <!-- creates the second column with the nearest store button -->
-            <v-col>
-              <!-- creates nearest store button (disabled/no href) -->
-              <v-btn
-                style='background-color: black;'
-              >
-                FIND NEAREST STORE
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-card-item>
+        <!-- creates nested grid -->
+        <v-row class='pb-4'>
+          <!-- column in nested grid -->
+          <v-col>
+            <!-- creates appointment button (disabled/no href) -->
+            <v-btn
+              style='background-color: black;'
+            >
+              BOOK AN APPOINTMENT
+            </v-btn>
+          </v-col>
+          <!-- creates the second column with the nearest store button -->
+          <v-col>
+            <!-- creates nearest store button (disabled/no href) -->
+            <v-btn
+              style='background-color: black;'
+            >
+              FIND NEAREST STORE
+            </v-btn>
+          </v-col>
+        </v-row>
       </v-col>
 
       <!-- second column in parent grid -->
       <v-col>
         <!-- column image -->
-        <v-img :src='images.img2' class='landing-images' />
+        <v-img :src='images.img2' class='landing-images'>
+          <template v-slot:placeholder>
+            <div class="d-flex align-center justify-center fill-height">
+              <v-progress-circular
+                color="grey-lighten-4"
+                indeterminate
+              />
+            </div>
+          </template>
+        </v-img>
       </v-col>
     </v-row>
 
@@ -73,33 +78,213 @@
           <!-- column in the grid -->
           <v-col>
             <!-- sets image for grid -->
-            <v-img :src='images.img5' />
+            <v-img :src='images.img5'>
+              <template v-slot:placeholder>
+                <div class="d-flex align-center justify-center fill-height">
+                  <v-progress-circular
+                    color="grey-lighten-4"
+                    indeterminate
+                  />
+                </div>
+              </template>
+            </v-img>
             <!-- sets disabled shopping link for the image above -->
-            <v-btn class='personalize-links' flat>Shop Bangels</v-btn>
+            <v-dialog>
+              <template v-slot:activator="{ props }">
+                <!-- sets disabled shopping link for the image above -->
+                <v-btn
+                  text='Shop Bangels' 
+                  class='personalize-links' 
+                  v-bind='props'
+                  flat
+                  @click='dialog = !dialog'
+                />
+              </template>
+
+              <template v-slot:default="{ isActive }">
+                <v-card>
+                  <!-- shows future home -->
+                  <v-card-item class='text-center my-10'>Future Home of Golden Shine Bangels Collection</v-card-item>
+                  <!-- creates a divider -->
+                  <v-divider />
+
+                  <!-- creates a divider -->
+                  <v-divider />
+                  <!-- div parent element -->
+                  <div class="pa-4 text-end">
+                    <!-- creates the close button -->
+                    <v-btn
+                      text='Close'
+                      class="text-none"
+                      color="medium-emphasis"
+                      min-width="92"
+                      rounded
+                      variant="outlined"
+                      @click="isActive.value = false"
+                    />
+                  </div>
+                </v-card>
+              </template>
+            </v-dialog>
           </v-col>
 
           <!-- column in the grid -->
           <v-col>
             <!-- sets image for grid -->
-            <v-img :src='images.img6' />
-            <!-- sets disabled shopping link for the image above -->
-            <v-btn class='personalize-links' flat>Shop Bracelets</v-btn>
+            <v-img :src='images.img6'>
+              <template v-slot:placeholder>
+                <div class="d-flex align-center justify-center fill-height">
+                  <v-progress-circular
+                    color="grey-lighten-4"
+                    indeterminate
+                  />
+                </div>
+              </template>
+            </v-img>
+            <!-- creates dialog window for Bracelets -->
+            <v-dialog>
+              <template v-slot:activator="{ props }">
+                <!-- sets disabled shopping link for the image above -->
+                <v-btn
+                  text='Shop Bracelets' 
+                  class='personalize-links' 
+                  v-bind='props'
+                  flat
+                  @click='dialog = !dialog'
+                />
+              </template>
+
+              <template v-slot:default="{ isActive }">
+                <v-card>
+                  <!-- shows future home -->
+                  <v-card-item class='text-center my-10'>Future Home of Golden Shine Bracelets Collection</v-card-item>
+                  <!-- creates a divider -->
+                  <v-divider />
+
+                  <!-- creates a divider -->
+                  <v-divider />
+                  <!-- div parent element -->
+                  <div class="pa-4 text-end">
+                    <!-- creates the close button -->
+                    <v-btn
+                      text='Close'
+                      class="text-none"
+                      color="medium-emphasis"
+                      min-width="92"
+                      rounded
+                      variant="outlined"
+                      @click="isActive.value = false"
+                    />
+                  </div>
+                </v-card>
+              </template>
+            </v-dialog>
           </v-col>
 
           <!-- column in the grid -->
           <v-col>
             <!-- sets image for grid -->
-            <v-img :src='images.img7' />
+            <v-img :src='images.img7'>
+              <template v-slot:placeholder>
+                <div class="d-flex align-center justify-center fill-height">
+                  <v-progress-circular
+                    color="grey-lighten-4"
+                    indeterminate
+                  />
+                </div>
+              </template>
+            </v-img>
             <!-- sets disabled shopping link for the image above -->
-            <v-btn class='personalize-links' flat>Shop Necklaces</v-btn>
+            <v-dialog>
+              <template v-slot:activator="{ props }">
+                <!-- sets disabled shopping link for the image above -->
+                <v-btn
+                  text='Shop Necklaces' 
+                  class='personalize-links' 
+                  v-bind='props'
+                  flat
+                  @click='dialog = !dialog'
+                />
+              </template>
+
+              <template v-slot:default="{ isActive }">
+                <v-card>
+                  <!-- shows future home -->
+                  <v-card-item class='text-center my-10'>Future Home of Golden Shine Necklaces Collection</v-card-item>
+                  <!-- creates a divider -->
+                  <v-divider />
+
+                  <!-- creates a divider -->
+                  <v-divider />
+                  <!-- div parent element -->
+                  <div class="pa-4 text-end">
+                    <!-- creates the close button -->
+                    <v-btn
+                      text='Close'
+                      class="text-none"
+                      color="medium-emphasis"
+                      min-width="92"
+                      rounded
+                      variant="outlined"
+                      @click="isActive.value = false"
+                    />
+                  </div>
+                </v-card>
+              </template>
+            </v-dialog>
           </v-col>
 
           <!-- column in the grid -->
           <v-col>
             <!-- sets image for grid -->
-            <v-img :src='images.img8' />
+            <v-img :src='images.img8'>
+              <template v-slot:placeholder>
+                <div class="d-flex align-center justify-center fill-height">
+                  <v-progress-circular
+                    color="grey-lighten-4"
+                    indeterminate
+                  />
+                </div>
+              </template>
+            </v-img>
             <!-- sets disabled shopping link for the image above -->
-            <v-btn class='personalize-links' flat>Shop Pendants</v-btn>
+            <v-dialog>
+              <template v-slot:activator="{ props }">
+                <!-- sets disabled shopping link for the image above -->
+                <v-btn
+                  text='Shop Pendants' 
+                  class='personalize-links' 
+                  v-bind='props'
+                  flat
+                  @click='dialog = !dialog'
+                />
+              </template>
+
+              <template v-slot:default="{ isActive }">
+                <v-card>
+                  <!-- shows future home -->
+                  <v-card-item class='text-center my-10'>Future Home of Golden Shine Pendants Collection</v-card-item>
+                  <!-- creates a divider -->
+                  <v-divider />
+
+                  <!-- creates a divider -->
+                  <v-divider />
+                  <!-- div parent element -->
+                  <div class="pa-4 text-end">
+                    <!-- creates the close button -->
+                    <v-btn
+                      text='Close'
+                      class="text-none"
+                      color="medium-emphasis"
+                      min-width="92"
+                      rounded
+                      variant="outlined"
+                      @click="isActive.value = false"
+                    />
+                  </div>
+                </v-card>
+              </template>
+            </v-dialog>
           </v-col>
         </v-row>
       </div>
@@ -112,7 +297,16 @@
         <!-- created div parent div -->
         <div class='text-center text-black'>
           <!-- image for the div -->
-          <v-img :src='images.img4' class='landing-images' />
+          <v-img :src='images.img4' class='landing-images'>
+            <template v-slot:placeholder>
+                <div class="d-flex align-center justify-center fill-height">
+                  <v-progress-circular
+                    color="grey-lighten-4"
+                    indeterminate
+                  />
+                </div>
+              </template>
+          </v-img>
           <!-- title for the parent -->
           <v-card-title>Custom Engraving</v-card-title>
           <!-- content for the parent div -->
@@ -128,7 +322,16 @@
         <!-- parent div -->
         <div class='text-center text-black'>
           <!-- image for the parent div -->
-          <v-img :src='images.img3' />
+          <v-img :src='images.img3'>
+            <template v-slot:placeholder>
+                <div class="d-flex align-center justify-center fill-height">
+                  <v-progress-circular
+                    color="grey-lighten-4"
+                    indeterminate
+                  />
+                </div>
+              </template>
+          </v-img>
           <!-- title for the parent div -->
           <v-card-title>Done In A Day*</v-card-title>
           <!-- content for the parent div -->
@@ -162,15 +365,67 @@
           <!-- column in the grid -->
           <v-col>
             <!-- sets image for grid -->
-            <v-img :src='images.img9' />
+            <v-img :src='images.img9'>
+              <template v-slot:placeholder>
+                <div class="d-flex align-center justify-center fill-height">
+                  <v-progress-circular
+                    color="grey-lighten-4"
+                    indeterminate
+                  />
+                </div>
+              </template>
+            </v-img>
             <!-- sets disabled shopping link for the image above -->
-            <v-btn class='personalize-links pt-2' variant='plain'>In-store & Virtual <br> Appointments</v-btn>
+            <v-dialog width='350px'>
+              <template v-slot:activator="{ props }">
+                <!-- sets disabled shopping link for the image above -->
+                <v-btn
+                  class='personalize-links pt-2' 
+                  v-bind='props'
+                  variant='plain'
+                  @click='dialog = !dialog'
+                >In-Store & Vurtual <br> Appointments</v-btn>
+              </template>
+
+              <template v-slot:default="{ isActive }">
+                <v-card>
+                  <v-date-picker show-adjacent-months></v-date-picker>
+                  <!-- creates a divider -->
+                  <v-divider />
+
+                  <!-- creates a divider -->
+                  <v-divider />
+                  <!-- div parent element -->
+                  <div class="pa-4 text-end">
+                    <!-- creates the close button -->
+                    <v-btn
+                      text='Close'
+                      class="text-none"
+                      color="medium-emphasis"
+                      min-width="92"
+                      rounded
+                      variant="outlined"
+                      @click="isActive.value = false"
+                    />
+                  </div>
+                </v-card>
+              </template>
+            </v-dialog>
           </v-col>
 
           <!-- column in the grid -->
           <v-col>
             <!-- sets image for grid -->
-            <v-img :src='images.img10' />
+            <v-img :src='images.img10'>
+              <template v-slot:placeholder>
+                <div class="d-flex align-center justify-center fill-height">
+                  <v-progress-circular
+                    color="grey-lighten-4"
+                    indeterminate
+                  />
+                </div>
+              </template>
+            </v-img>
             <!-- sets disabled shopping link for the image above -->
             <v-btn class='personalize-links pt-2' variant='plain'>Full-Service <br> Jeweler</v-btn>
           </v-col>
@@ -178,17 +433,122 @@
           <!-- column in the grid -->
           <v-col>
             <!-- sets image for grid -->
-            <v-img :src='images.img11' />
+            <v-img :src='images.img11'>
+              <template v-slot:placeholder>
+                <div class="d-flex align-center justify-center fill-height">
+                  <v-progress-circular
+                    color="grey-lighten-4"
+                    indeterminate
+                  />
+                </div>
+              </template>
+            </v-img>
             <!-- sets disabled shopping link for the image above -->
-            <v-btn class='personalize-links' variant='plain'>Payment Options</v-btn>
+            <v-dialog>
+              <template v-slot:activator="{ props }">
+                <!-- sets disabled shopping link for the image above -->
+                <v-btn
+                  text='Payment Options' 
+                  class='personalize-links' 
+                  v-bind='props'
+                  variant='plain'
+                  @click='dialog = !dialog'
+                />
+              </template>
+
+              <template v-slot:default="{ isActive }">
+                <v-card>
+                  <div class="d-flex justify-space-around py-2">
+                    <v-img v-for="payment in payments" :key="payment" :src='payment.img' height='200px' />
+                  </div>
+                  <!-- creates a divider -->
+                  <v-divider />
+
+                  <!-- creates a divider -->
+                  <v-divider />
+                  <!-- div parent element -->
+                  <div class="pa-4 text-end">
+                    <!-- creates the close button -->
+                    <v-btn
+                      text='Close'
+                      class="text-none"
+                      color="medium-emphasis"
+                      min-width="92"
+                      rounded
+                      variant="outlined"
+                      @click="isActive.value = false"
+                    />
+                  </div>
+                </v-card>
+              </template>
+            </v-dialog>
           </v-col>
 
           <!-- column in the grid -->
           <v-col>
             <!-- sets image for grid -->
-            <v-img :src='images.img12' />
+            <v-img :src='images.img12'>
+              <template v-slot:placeholder>
+                <div class="d-flex align-center justify-center fill-height">
+                  <v-progress-circular
+                    color="grey-lighten-4"
+                    indeterminate
+                  />
+                </div>
+              </template>
+            </v-img>
             <!-- sets disabled shopping link for the image above -->
-            <v-btn class='personalize-links' variant='plain'>Ways to Shop</v-btn>
+            <v-dialog>
+              <template v-slot:activator="{ props }">
+                <!-- sets disabled shopping link for the image above -->
+                <v-btn 
+                  class='personalize-links' 
+                  v-bind='props'
+                  variant='plain'
+                  @click='dialog = !dialog'
+                >Ways To Shop</v-btn>
+              </template>
+
+              <template v-slot:default="{ isActive }">
+                <v-card>
+                  <v-list>
+                    <v-list-subheader class='text-center'>Ways To Shop</v-list-subheader>
+
+                    <v-list-item
+                      v-for="(item, i) in items"
+                      :key="i"
+                      :value="item"
+                      color="primary"
+                      variant="tonal"
+                    >
+                      <template v-slot:prepend>
+                        <v-icon :icon="item.icon"></v-icon>
+                      </template>
+
+                      <v-list-item-title v-text="item.text"></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                  <!-- creates a divider -->
+                  <v-divider />
+
+                  <!-- creates a divider -->
+                  <v-divider />
+                  <!-- div parent element -->
+                  <div class="pa-4 text-end">
+                    <!-- creates the close button -->
+                    <v-btn
+                      text='Close'
+                      class="text-none"
+                      color="medium-emphasis"
+                      min-width="92"
+                      rounded
+                      variant="outlined"
+                      @click="isActive.value = false"
+                    />
+                  </div>
+                </v-card>
+              </template>
+            </v-dialog>
           </v-col>
         </v-row>
       </div>
@@ -210,10 +570,17 @@
   import img10 from '@/assets/FullService_Jeweler.webp'
   import img11 from '@/assets/Payment_Options.webp'
   import img12 from '@/assets/Ways_to_Shop.webp'
+  import visa from '@/assets/visa.svg'
+  import amex from '@/assets/american-express-card.svg'
+  import gPay from '@/assets/google-pay-1.svg'
+  import mastercard from '@/assets/mastercard-4.svg'
+
+  import { ref } from 'vue'
 
   // exports data
   export default {
     data: () => ({
+      dialog: ref(true),
       // images array
       images: {
         img1, img2, 
@@ -222,16 +589,29 @@
         img7, img8,
         img9, img10,
         img11, img12
-      }
+      },
+      payments: [
+        {img: visa}, {img: mastercard},
+        {img: gPay}, {img: amex}, 
+      ],
+      items: [
+        { text: 'Virtual Appointment', icon: 'mdi-clock' },
+        { text: 'In-Person', icon: 'mdi-account' },
+        { text: 'Online/Mobile', icon: 'mdi-cellphone-link' },
+        { text: 'Call/Text', icon: 'mdi-cellphone-text' },
+        { text: 'Chat', icon: 'mdi-chat-processing-outline '}
+      ],
     }),
     methods: {
-      // for possible future use
+      onClick () {
+        this.snackbar = false
+      },
     },
     computed: {
       // for possible future use
     },
     components: {
-      // for possible future use    
+      // 
     }
   }
 </script>

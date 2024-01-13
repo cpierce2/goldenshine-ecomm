@@ -8,19 +8,20 @@
         <!-- produces title for the contact form -->
         <v-card-title 
           class='text-center pb-5 pt-6' 
-          style='font-size: calc(14pt + 1vw);'>
+          style='font-size: calc(10pt + 1vw);'>
           Golden Shine Jewlery Contact Form
         </v-card-title>
         <!-- disclaimer -->
         <v-card-text>
-          <p class='mx-12 px-12 pb-5'>Thank you for contacting Golden Shine Jelwery. We are thrilled that you are considering 
+          <p class='mx-4 pb-4 text-justify'>
+            Thank you for contacting Golden Shine Jelwery. We are thrilled that you are considering 
             our services as your jelwery provider. Please understand that we are working hard to provide 
             the best customer service and quality products online. Which has also led to an increase 
             in contact requests. We typically respond to contact request within three to four business 
             days. We apologize for inconvenience this may cause.
           </p>
           <!-- nested container for the contact form -->
-          <v-container>
+          <v-form ref='form'>
             <!-- nested grid -->
             <v-row>
               <!-- column for the nested grid -->
@@ -31,7 +32,9 @@
               >
                 <!-- text field for first name -->
                 <v-text-field
-                  label="Legal first name*"
+                  label="First name*"
+                  hint='"John"'
+                  :rules='firstNameRules'
                   required
                 >
                 </v-text-field>
@@ -45,7 +48,6 @@
                 <!-- text field for first name -->
                 <v-text-field
                   label="Middle name (optional)"
-                  hint="example of helper text only on focus"
                 >
                 </v-text-field>
               </v-col>
@@ -57,9 +59,9 @@
               >
                 <!-- text field for first name -->
                 <v-text-field
-                  label="Legal last name*"
-                  hint="example of persistent helper text"
-                  persistent-hint
+                  label="Last name*"
+                  hint='"Doe"'
+                  :rules='lastNameRules'
                   required
                 >
                 </v-text-field>
@@ -70,6 +72,8 @@
                 <!-- text field for email -->
                 <v-text-field
                   label="Email*"
+                  hint='john_doe@email.com'
+                  :rules='emailRules'
                   required
                 >
                 </v-text-field>
@@ -82,6 +86,7 @@
                   prepend-icon='mdi-comment'
                   label="Add message for us*"
                   type="text"
+                  :rules='messageRules'
                   required
                 >
                 </v-text-field>
@@ -94,8 +99,9 @@
               >
                 <!-- selects a user age -->
                 <v-select
-                  :items="['0-17', '18-29', '30-54', '54+']"
+                  :items="ages"
                   label="Age*"
+                  :rules="ageRules"
                   required
                 >
                 </v-select>
@@ -108,15 +114,16 @@
               >
                 <!-- autocomplete action for the iterests -->
                 <v-autocomplete
-                  :items="['Rings', 'Necklaces',  'Ear Rings', 'Pendants', 'Cuffs', 'Coins', 'Gold Bars', 'Bracelet', 'Anklets', 'Brooch', 'Sizing', 'Engraving', 'Gift Items']"
+                  :items="items"
                   label="Interests*"
+                  :rules="interestRules"
                   multiple
                   required
                 >
                 </v-autocomplete>
               </v-col>
             </v-row>
-          </v-container>
+          </v-form>
 
           <!--  -->
           <small>*indicates required field</small>
@@ -128,19 +135,66 @@
           <v-spacer />
           <!-- button action -->
           <v-btn
+            text='Reset'
             color="blue-darken-1"
             variant="text"
-            @click="dialog = false">
-            Close
-          </v-btn>
-            
-          <!-- button action -->
-          <v-btn
-            color="blue-darken-1"
-            variant="text"
-            @click="dialog = false">
-            Submit
-          </v-btn>
+            @click="reset" 
+          />
+          
+          <v-dialog>
+            <!-- template for the add to cart button -->
+            <template v-slot:activator="{ props }">
+              <!-- creates the button -->
+              <v-btn 
+                text='Submit'
+                v-bind='props'
+                v-model='cartItems'
+                color='blue-darken-1'
+                variant='text'
+                @click='dialog = !dialog'
+              />
+            </template>
+
+            <!-- template for the success dialog window -->
+            <template v-slot:default="{ isActive }">
+              <v-card
+                class="mx-auto text-center px-6"
+                max-width='500'
+                title='Thank You'>
+                <!-- creates a divider -->
+                <v-divider />
+                <!-- div parent -->
+                <div class="py-12 text-center">
+                  <!-- shows a circle with checkmark icon -->
+                  <v-icon
+                    class="mb-6"
+                    color="success"
+                    icon="mdi-check-circle-outline"
+                    size="128" 
+                  />
+                  <!-- displays "item added to cart" text -->
+                  <div class="text-h4 font-weight-bold">Form Submitted</div>
+                  <v-divider />
+                  <div class='pt-3 my-auto'>We have recieved your contact form and will reach out within 3-5 business days.</div>
+                </div>
+                <!-- creates a divider -->
+                <v-divider />
+                <!-- div parent element -->
+                <div class="pa-4 text-end">
+                  <!-- creates the close button -->
+                  <v-btn
+                    text='Close'
+                    class="text-none"
+                    color="medium-emphasis"
+                    min-width="92"
+                    rounded
+                    variant="outlined"
+                    @click="isActive.value = false"
+                  />
+                </div>
+              </v-card>
+            </template>
+          </v-dialog>
         </v-card-actions>
       </v-card>
     </v-row>
@@ -154,7 +208,54 @@
   export default {
     data: () => ({
       dialog: false,
-
+      name: '',
+      firstNameRules: [
+        v => !!v || 'First name is required',
+        v => (v && v.length <= 18) || 'Name must be less than 18 characters'
+      ],
+      lastNameRules: [
+        v => !!v || 'Last name is required'
+      ],
+      emailRules: [
+        v => !!v || 'Email is required'
+      ],
+      messageRules: [
+        v => !!v || 'Message is required'
+      ],
+      ageRules: [
+        v => !!v || 'Age is required'
+      ],
+      interestRules: [
+        v => !!v || 'Interest is required'
+      ],
+      select: null,
+      items: [
+        'Rings', 'Necklaces', 'Ear Rings', 
+        'Pendants', 'Cuffs', 'Coins', 
+        'Gold Bars', 'Bracelet', 'Anklets', 
+        'Brooch', 'Sizing', 'Engraving', 
+        'Gift Items'
+      ],
+      ages: [
+        '0-17', 
+        '18-29', 
+        '30-54', 
+        '54+'
+      ],
+      checkbox: false,
     }),
+    methods: {
+      async validate () {
+        const { valid } = await this.$refs.form.validate()
+
+        if (valid) alert('Form is valid')
+      },
+      reset () {
+        this.$refs.form.reset()
+      },
+      resetValidation () {
+        this.$refs.form.resetValidation()
+      },
+    },
   }
 </script>
