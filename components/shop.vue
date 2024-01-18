@@ -131,14 +131,6 @@
         </v-card-actions>
       </v-card>
     </v-row>
-
-    <v-row>
-      <v-col>
-        <ul id='price'>
-
-        </ul>
-      </v-col>
-    </v-row>
   </v-container>
 </template>
 
@@ -317,7 +309,6 @@
     },
     components: {
       // empty space for future components
-      Shop
     },
   }
 </script>
