@@ -1,9 +1,9 @@
 <template>
   <!-- container for the page -->
   <v-container fluid class='landing-cont'>
-    <div class='landing-vid'>
+    <v-container fluid class='landing-vid'>
       <video autoplay loop preload="auto" :src='vids.vid'></video>
-    </div>
+    </v-container>
           
 
 
