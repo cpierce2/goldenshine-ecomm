@@ -134,7 +134,9 @@
 
     <v-row>
       <v-col>
-        
+        <ul id='price'>
+
+        </ul>
       </v-col>
     </v-row>
   </v-container>
@@ -157,8 +159,6 @@
 
   // imports ref from vue
   import { ref } from 'vue'
-  import Shop from '@/components/shop.json'
-
 
   // creates data for the page to loop through and export
   export default {
