@@ -137,6 +137,8 @@ header {
   padding: 2rem 1rem;
 }
 .landing-vid {
+  display: flex;
+  justify-content: center;
   height: 400px;
   background: $landingBg;
 }
@@ -177,7 +179,7 @@ header {
   }
 
   .landing-vid {
-    height: 100%;
+    height: 200px;
   }
 
   .landing-images {

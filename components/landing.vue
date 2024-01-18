@@ -1,11 +1,11 @@
 <template>
   <!-- container for the page -->
   <v-container fluid class='landing-cont'>
-    <!-- div parent -->
     <div class='landing-vid'>
-      <!-- creates header video -->
-      <video width='100%' height='100%' autoplay loop preload="auto" :src='vids.vid'></video>
+      <video autoplay loop preload="auto" :src='vids.vid'></video>
     </div>
+          
+
 
     <!-- sheet to show content -->
     <v-sheet
