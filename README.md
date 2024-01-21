@@ -1,75 +1,18 @@
-# Nuxt 3 Minimal Starter
+# Golden Shine Jewelry eCommerece Site
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a fictional site created to showcase authors ability to create an eCommerece site using Javascript frameworks Nuxt 3 and CSS framework Vuetify 3. The site is deployed on Netfliy.
 
-## Setup
+## Disclaimer:
 
-Make sure to install the dependencies:
+This site has limited functionality due to possible liabilities which may include but not limited to:
 
-```bash
-# npm
-npm install
+- Golden Shine Jewelry Shop (GSJ) is a fictious company with NO legal operating licenses, etc.
+- Creating an account with no relation to Golden Shine Jewelry Shop
+- Purchasing fictious jewlery on the site
+- Contacting GSJ with no responsive communication
+- Reviews and quotes are fictional and do not represent an actual individuals view
+- Shopping cart functionality is stopped prior to the ability to enter any payment information 
 
-# pnpm
-pnpm install
+## Server Deployment
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Check out [Golden Shine Jewelry](https://golden-shine-jewelry.netlify.app/) on Netlify.
